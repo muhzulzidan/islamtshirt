@@ -3,24 +3,16 @@ import { graphql } from 'gatsby'
 
 import SEO from '~/components/seo'
 import ProductForm from '~/components/ProductForm'
-import {
-  Img,
-  Container,
-  TwoColumnGrid,
-  GridLeft,
-  GridRight,
-} from '~/utils/styles'
-import { ProductTitle, ProductDescription } from './styles'
 import { GatsbyImage } from "gatsby-plugin-image"
+import Layout from '../../layouts'
 
 const ProductPage = ({ data }) => {
-  const product = data.shopifyProduct
+  const product = data.product
   return (
-    <>
+    <Layout>
       <SEO title={product.title} description={product.description} />
-      <Container>
-        <TwoColumnGrid>
-          <GridLeft>
+      <div className="productPage" >
+        <div className="productPageImage" >
             {product.images.map(image => (
               <GatsbyImage
                 image={image.gatsbyImageData}
@@ -28,23 +20,22 @@ const ProductPage = ({ data }) => {
                 alt={product.title}
               />
             ))}
-          </GridLeft>
-          <GridRight>
-            <ProductTitle>{product.title}</ProductTitle>
-            <ProductDescription
+          </div>
+        <div className="productPageDesc" >
+            <h2>{product.title}</h2>
+            <p
               dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
             />
             <ProductForm product={product} />
-          </GridRight>
-        </TwoColumnGrid>
-      </Container>
-    </>
+          </div>
+      </div>
+    </Layout>
   )
 }
 
 export const query = graphql`
   query($handle: String!) {
-    shopifyProduct(handle: { eq: $handle }) {
+    product : shopifyProduct(handle: { eq: $handle }) {
       id
       title
       handle

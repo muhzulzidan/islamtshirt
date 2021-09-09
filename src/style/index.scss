@@ -1,0 +1,66 @@
+@import "./reset";
+
+
+html, ul, li, a {
+    font-family: "Inter",  sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+// variable
+
+@import "./variable/color";
+@import "./variable/bp";
+@import "./variable/contact";
+
+// slick
+$slick-font-path: "./slick/slick-carousel/slick/fonts/";
+$slick-loader-path: "./slick/slick-carousel/slick/";
+@import "./slick/slick-theme";
+@import "./slick/slick";
+
+// components
+
+@import "./layout/layout";
+@import "./header/header";
+@import "./footer/footer";
+
+
+// page
+
+@import "./page/index";
+@import "./page/about";
+@import "./page/blogs";
+@import "./page/contacts";
+@import "./page/shop";
+
+// productGrid
+@import "./productGrid/";
+// productPage
+@import "./productPage/";
+// cart 
+@import "./cart/";
+// newsletter
+@import "./newsletter/";
+
+// wa
+// @import "./wa/";
+
+html {
+    background-color: $white-color;
+    body{
+        background-color: $white-color;
+    }
+}
+.hidden{
+    display: none;
+}

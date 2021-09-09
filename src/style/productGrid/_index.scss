@@ -1,0 +1,47 @@
+.productGrid {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-size: calc(1px + 2em);
+    .carauselsProductGrid {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        h2{
+            font-weight: 700;
+        }
+        p{
+            margin: .5rem 0em;
+            opacity: .8;
+            font-size: 1.1rem;
+        }
+        .arrowContrainer {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+
+            .button-next,
+            .button-prev {
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+            }
+
+            .button-prev {
+                position: absolute;
+                top: 16em;
+                left: -3em;
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+            .button-next{
+                position: absolute;
+                top: 16em;
+                right: -3em;
+            }
+        }
+
+    }
+
+}

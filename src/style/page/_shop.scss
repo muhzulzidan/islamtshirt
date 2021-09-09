@@ -1,0 +1,57 @@
+.shop-page {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        background-color: black;
+        padding: 5vh 1rem;
+        position: relative;
+
+        h2 {
+            font-weight: 900;
+            width: 15rem;
+            font-size: 3rem;
+        }
+
+        svg {
+            display: none;
+            opacity: .8;
+            position: absolute;
+            top: 20rem;
+            right: 3em;
+            width: 10rem;
+        }
+
+        a {
+            margin-top: 5em;
+            width: fit-content;
+            border: 2px solid white;
+            padding: 1em;
+        }
+    }
+
+    .creative {
+        padding: 3em 1em;
+        display: flex;
+    }
+
+    .product {
+        padding: 1em 1em;
+
+        h2 {
+            font-weight: 600;
+            font-size: 2rem;
+        }
+        p{
+            margin-top: .5rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        h3 {
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    }
+
+}

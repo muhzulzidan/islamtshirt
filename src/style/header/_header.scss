@@ -1,0 +1,44 @@
+
+.header {
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 10vh;
+    border-bottom: 1px solid rgb(237, 242, 249);
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    a{
+        display: flex;
+        align-self: center;
+    }
+    .burgerContainer{
+        display: flex;
+        align-self: center;
+        svg{
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    .MenuButton{
+        background-color: transparent;
+        border: none;
+        // padding-left: 2em;
+        // padding-top: 4em;
+        transform: translateY(0px);
+        z-index: 12;
+    }
+    .menuOpen{
+        position: absolute;
+        right: 3em;
+    }
+    .hamburger-react{
+        z-index: 13;
+    }
+    .nav{
+        display: none;
+    }
+}
+
