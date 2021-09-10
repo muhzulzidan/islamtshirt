@@ -20,6 +20,7 @@
     "gatsby-plugin-offline": "^4.13.0",
     "gatsby-plugin-react-helmet": "^4.13.0",
     "gatsby-plugin-react-svg": "^3.0.1",
+    "gatsby-plugin-remote-images": "^3.0.0",
     "gatsby-plugin-root-import": "^2.0.7",
     "gatsby-plugin-sass": "^4.13.0",
     "gatsby-plugin-sharp": "^3.13.0",
@@ -58,6 +59,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop -H 0.0.0.0",
+    "serve": "gatsby serve -H 0.0.0.0",
     "start": "npm run dev",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""

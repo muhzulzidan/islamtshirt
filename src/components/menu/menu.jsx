@@ -31,9 +31,9 @@ class Menu extends React.Component {
                 <ul className={styles.link}>
                     {/* <li> <MenuLink >aa</MenuLink> </li> */}
                     <li><Link to="/" activeClassName={styles.active} onClick={this.open} >Home</Link></li>
-                    <li><Link partiallyActive={true} to="/about" activeClassName={styles.active} onClick={this.open} >About</Link></li>
-                    <li><Link partiallyActive={true} to="/blogs" activeClassName={styles.active} onClick={this.open} >Blogs</Link></li>
                     <li><Link partiallyActive={true} to="/shop" activeClassName={styles.active} onClick={this.open} >Shop</Link></li>
+                    <li><Link partiallyActive={true} to="/about" activeClassName={styles.active} onClick={this.open} >About</Link></li>
+                    {/* <li><Link partiallyActive={true} to="/blogs" activeClassName={styles.active} onClick={this.open} >Blogs</Link></li> */}
                 </ul>
                 <div className={styles.header}>
                     {/* make a link with h1 */}

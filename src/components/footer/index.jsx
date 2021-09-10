@@ -32,7 +32,7 @@ const Social = () => (
         <a href="https://www.facebook.com/theshop.co.id/" target="_blank" rel="noopener noreferrer"> 
             <Fb className="fb" /> Facebook
         </a>
-        <a href="https://www.instagram.com/theshop.co.id/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/islamtshirt/" target="_blank" rel="noopener noreferrer">
             <Ig className="ig"/> Instagram
         </a>
     </div>
