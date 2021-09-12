@@ -35,11 +35,13 @@ const IndexPage = ({data}, location) => {
       </div>
       <div className="aboutUs">
           <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="A kitten" /> 
-          <h2>SOMETIMES WE DON’T HAVE TO SAY ANYTHING</h2>
-          <div className="child">
-            <h3>MISSION</h3>
-            <p>Our Mission Is To Spread Dakwah With A Fun Way Like Using Our Fashion To Spread The Word Of Allah</p>
-            <Link to="/about" >Learn More</Link>
+          <div className="sometimesh2">
+            <h2>SOMETIMES WE DON’T HAVE TO SAY ANYTHING</h2>
+            <div className="child">
+              <h3>MISSION</h3>
+              <p>Our Mission Is To Spread Dakwah With A Fun Way Like Using Our Fashion To Spread The Word Of Allah</p>
+              <Link to="/about" >Learn More</Link>
+            </div>
           </div>
       </div>
       <NewsLetter />

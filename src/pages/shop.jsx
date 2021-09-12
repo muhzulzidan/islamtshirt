@@ -2,7 +2,7 @@ import React from 'react'
 // import { Link } from 'gatsby'
 
 import SEO from '~/components/seo'
-import ProductGrid from '~/components/ProductGrid'
+import ProductGrid from '../components/ProductGrid'
 import IslamArab from "../images/svg/islamarab.svg"
 
 import Layout from '../layouts'

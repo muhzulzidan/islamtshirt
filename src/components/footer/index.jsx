@@ -46,8 +46,8 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="buyingFooter">
-                <div className="buttonFooter" >
-                    <button className={`MenuButton`} onClick={() => { setIsOpen(!isOpen); }}>
+                <div className="buttonFooter" onClick={() => { setIsOpen(!isOpen); }}>
+                    <button className={`MenuButton`} >
                         BUYING
                     </button>
                     <Arrow className={isOpen ? `open` : null} />
@@ -57,8 +57,8 @@ const Footer = () => {
                 </Collapse>
             </div>
             <div className="comFooter">
-                <div className="buttonFooter" >
-                    <button className={`MenuButton`} onClick={() => { setIsOpenCom(!isOpenCom); }}>
+                <div className="buttonFooter" onClick={() => { setIsOpenCom(!isOpenCom); }}>
+                    <button className={`MenuButton`} >
                         COMMUNITY
                     </button>
                     <Arrow className={isOpenCom ? `open` : null} />
@@ -68,8 +68,8 @@ const Footer = () => {
                 </Collapse>
             </div>
             <div className="socialFooter">
-                <div className="buttonFooter" >
-                    <button className={`MenuButton`} onClick={() => { setIsOpenSocial(!isOpenSocial); }}>
+                <div className="buttonFooter" onClick={() => { setIsOpenSocial(!isOpenSocial); }}>
+                    <button className={`MenuButton`} >
                         SOCIAL
                     </button>
                     <Arrow className={isOpenSocial ? `open` : null} />

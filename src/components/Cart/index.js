@@ -71,9 +71,11 @@ const Cart = () => {
 
 
   return (
-    <div>
-      {lineItems}
-      <div className="">
+    <div className="cartContainer">
+      <div className="lineItemContainer">
+        {lineItems}
+      </div>
+      <div className="total">
         <div>
           <h2>Subtotal</h2>
           <p>$ {checkout.subtotalPrice}</p>

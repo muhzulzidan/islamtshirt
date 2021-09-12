@@ -7,9 +7,13 @@
         font-size: 1.5rem;
         font-weight: 800;
     }
-    .newsletter__container__form{
+    .newsletter__container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+    }
+    .newsletter__container__form {
+        display: flex;
+        flex-direction: column;
         margin-top: 1em;
         form{
             width: 100%;
@@ -35,6 +39,23 @@
             font-weight: 400;
             &:focus{
                 outline: none;
+            }
+        }
+    }
+}
+
+@include bp("small"){
+    .newsletter{
+        .newsletter__container {
+            display: flex;
+            flex-direction: row;
+            .newsletter__container__title{
+                width: 50%;
+                display: flex;
+                align-self: center;
+            }
+            .newsletter__container__form{
+                width: 50%;
             }
         }
     }

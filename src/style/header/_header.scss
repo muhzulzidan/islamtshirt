@@ -14,6 +14,18 @@
         display: flex;
         align-self: center;
     }
+    .LogoHeader{
+        display: flex;
+            .header__menu {
+                display: flex;
+                margin-left: 1em;
+                a{
+                    margin-left: 1em;
+                    text-transform: uppercase;
+                }
+            }
+    }
+
     .burgerContainer{
         display: flex;
         align-self: center;

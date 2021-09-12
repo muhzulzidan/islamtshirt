@@ -6,8 +6,11 @@ import StoreContext from '~/context/StoreContext'
 import Carausels from '../carausels'
 // import CurrencyConverter from 'react-currency-conv';
 // import ExchangeRate from "react-currency-conversion";
+// import media queries
+import { useMediaQuery } from 'react-responsive'
 
 const ProductGrid = (location) => {
+
   const {
     store: { checkout },
   } = useContext(StoreContext)
@@ -42,9 +45,24 @@ const ProductGrid = (location) => {
       minimumFractionDigits: 2,
       style: 'currency',
     }).format(parseFloat(price ? price : 0))
+
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
+
+  
+
   return (
-    <div className="productGrid" >
-      { location.location.path==="/shop/" ? 
+    <div className={`productGrid ${location.location.path === "/shop/" ? "productGridShop" : null}`} >
+      {isMobile ? console.log("hey") : console.log("nah")}
+
+      { location.location.path==="/shop/" ?
         allShopifyProduct.edges ? (
           allShopifyProduct.edges.map(
             ({
@@ -61,6 +79,7 @@ const ProductGrid = (location) => {
                   <GatsbyImage
                     image={firstImage.gatsbyImageData}
                     alt={handle}
+                    className="productImage"
                   />
                 </Link>
                 <h2>{title}</h2>
@@ -70,10 +89,10 @@ const ProductGrid = (location) => {
               </div>
             )
           )
-        ) : (
-          <p>No Products found!</p>
-        ):
-        <Carausels className="carauselsProductGrid">
+        ) : ( <p>No Products found!</p> ) 
+        :
+        isMobile ? ( 
+          <Carausels className="carauselsProductGrid" settings={settings}>
           {allShopifyProduct.edges ? (
             allShopifyProduct.edges.map(
               ({
@@ -102,7 +121,38 @@ const ProductGrid = (location) => {
           ) : (
             <p>No Products found!</p>
           )}
-        </Carausels>  
+        </Carausels> ) : ( 
+            <Carausels className="carauselsProductGrid carauselsProductGrid_mobile" {...settings} >
+              {allShopifyProduct.edges ? (
+                allShopifyProduct.edges.map(
+                  ({
+                    node: {
+                      id,
+                      handle,
+                      title,
+                      images: [firstImage],
+                      variants: [firstVariant],
+                    },
+                  }) => (
+                    <div key={id}>
+                      <Link to={`/product/${handle}/`}>
+                        <GatsbyImage
+                          image={firstImage.gatsbyImageData}
+                          alt={handle}
+                        />
+                      </Link>
+                      <h2>{title}</h2>
+                      <p>{getPrice(firstVariant.price)}</p>
+                      {/* <ExchangeRate from='IDR' to='USD' value={`${firstVariant.price}`}/> */}
+
+                    </div>
+                  )
+                )
+              ) : (
+                <p>No Products found!</p>
+              )}
+            </Carausels>
+            )
       
       }
 

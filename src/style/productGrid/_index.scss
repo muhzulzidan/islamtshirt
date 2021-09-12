@@ -45,3 +45,18 @@
     }
 
 }
+
+@include bp("small"){
+    .productGridShop {
+        flex-wrap: wrap;
+        flex-direction: row;
+        .productImage {
+            width: 10em;
+        }
+    }
+
+    .productGridShop >div {
+        width: 10em;
+        margin-left: 2em;
+    }
+}

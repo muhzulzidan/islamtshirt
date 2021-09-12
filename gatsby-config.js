@@ -60,26 +60,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-HZJ8KM48PH",
-          "GTM-5W79T2F",
           "UA-207257977-1",
           // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
           // "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
-        // This object gets passed directly to the gtag config command
-        // This config will be shared across all trackingIds
         gtagConfig: {
-          optimize_id: "GTM-5W79T2F",
+          optimize_id: "UA-207257977-1",
           anonymize_ip: true,
           cookie_expires: 0,
         },
         // This object is used for configuration specific to this plugin
         pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: false,
-          // Setting this parameter is also optional
+          head: true,
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
           // exclude: ["", ""],
