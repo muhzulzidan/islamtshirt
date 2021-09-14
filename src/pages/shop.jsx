@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 
-import SEO from '~/components/seo'
+import SEO from '../components/seo'
 import ProductGrid from '../components/ProductGrid'
 import IslamArab from "../images/svg/islamarab.svg"
 
@@ -10,7 +10,7 @@ import Layout from '../layouts'
 const ShopPage = (location) => (
     <Layout location={location}>
         <div className="shop-page">
-            <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+            <SEO title="Shop"/>
             <div className="hero" >
                 <h1 className="hidden" >Shop</h1>
                 <h2>Shop</h2>

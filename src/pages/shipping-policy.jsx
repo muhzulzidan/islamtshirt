@@ -8,7 +8,7 @@ const ShippingPolicy = (location) => {
     return (
         <Layout location={location}>
             <div className="about-page">
-                <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
+                <SEO title="ShippingPolicy" />
                 <h1> Shipping Policy </h1>
                 <div className="contentAbout"> 
 

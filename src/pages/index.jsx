@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-import SEO from '~/components/seo'
+import SEO from '../components/seo'
 import ProductGrid from '../components/ProductGrid'
 import IslamArab from "../images/svg/islamarab.svg"
 import IslamArabStroke from "../images/svg/islamArabStroke.svg"
@@ -16,7 +16,7 @@ const IndexPage = ({data}, location) => {
 
   <Layout location={location}>
     <div className="index-page">
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title={location.path} />
       <div className="hero" >
         <h1 className="hidden" >ISLAMTSHIRT</h1>
         <h2>SPREAD DAKWAH WITH US</h2>

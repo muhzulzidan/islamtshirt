@@ -11,7 +11,7 @@ const Blogs = (location) => {
                 <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
                 <h1>Coming Soon</h1>
                 <div className="contentAbout">
-                    
+                    Nothing Yet
                 </div>
             </div>
         </Layout>

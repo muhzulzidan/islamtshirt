@@ -8,7 +8,7 @@ const PrivacyPolicy = (location) => {
     return (
         <Layout location={location}>
             <div className="about-page">
-                <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
+                <SEO title="PrivacyPolicy"/>
                 <h1> Privacy Policy </h1>
                 <div className="contentAbout">
                     <p>This Privacy Policy describes how islamtshirt.myshopify.com (the “Site” or “we”) collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site.</p>
