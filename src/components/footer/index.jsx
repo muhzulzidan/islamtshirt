@@ -13,9 +13,10 @@ import Fb from '../../images/svg/facebook.svg'
 const Buying = () => (
     <div>
         <Link to="/shop" > Shop </Link>
-        <Link to="/privacy" > Privacy</Link>
-        <Link to="/terms" > Terms of Use </Link>
-        <Link to="/costumer" > Costumer Service </Link>
+        <Link to="/terms-of-service" > Terms of Service </Link>
+        <Link to="/privacy-policy" > Privacy Policy  </Link>
+        <Link to="/refund-policy" > Refund Policy </Link>
+        <Link to="/shipping-policy" > Shipping Policy </Link>
     </div>
 );
 

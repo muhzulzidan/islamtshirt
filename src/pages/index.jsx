@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 import SEO from '~/components/seo'
-import ProductGrid from '~/components/ProductGrid'
+import ProductGrid from '../components/ProductGrid'
 import IslamArab from "../images/svg/islamarab.svg"
 import IslamArabStroke from "../images/svg/islamArabStroke.svg"
 

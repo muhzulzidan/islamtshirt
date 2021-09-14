@@ -41,22 +41,14 @@ const ProductGrid = (location) => {
 
   const getPrice = price =>
     Intl.NumberFormat(undefined, {
-      currency: checkout.currencyCode ? checkout.currencyCode : 'IDR',
+      currency: checkout.currencyCode ? checkout.currencyCode : 'USD',
       minimumFractionDigits: 2,
       style: 'currency',
     }).format(parseFloat(price ? price : 0))
 
   const isMobile = useMediaQuery({ maxWidth: 767 })
 
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
 
-  
 
   return (
     <div className={`productGrid ${location.location.path === "/shop/" ? "productGridShop" : null}`} >
@@ -92,7 +84,7 @@ const ProductGrid = (location) => {
         ) : ( <p>No Products found!</p> ) 
         :
         isMobile ? ( 
-          <Carausels className="carauselsProductGrid" settings={settings}>
+          <Carausels className="carauselsProductGrid" >
           {allShopifyProduct.edges ? (
             allShopifyProduct.edges.map(
               ({
@@ -122,7 +114,7 @@ const ProductGrid = (location) => {
             <p>No Products found!</p>
           )}
         </Carausels> ) : ( 
-            <Carausels className="carauselsProductGrid carauselsProductGrid_mobile" {...settings} >
+            <Carausels className="carauselsProductGrid carauselsProductGrid_mobile"  >
               {allShopifyProduct.edges ? (
                 allShopifyProduct.edges.map(
                   ({

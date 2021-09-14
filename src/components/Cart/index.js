@@ -12,7 +12,7 @@ const LineItem = props => {
   } = useContext(StoreContext)
 
   // console.log(item)
-  console.log(item.variant.price)
+  // console.log(item.variant.price)
   const variantImage = item.variant.image ? (
     <img
       className="cart-item__image"

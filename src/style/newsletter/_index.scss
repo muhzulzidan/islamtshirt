@@ -46,6 +46,7 @@
 
 @include bp("small"){
     .newsletter{
+        padding: 8rem 2rem;
         .newsletter__container {
             display: flex;
             flex-direction: row;

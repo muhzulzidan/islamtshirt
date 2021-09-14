@@ -14,8 +14,8 @@
         svg{
             opacity: .8;
             position: absolute;
-            top: 20rem;
-            right: 3em;
+            top: 17rem;
+            right: 1em;
             width: 10rem;
         }
         a{
@@ -41,7 +41,7 @@
         padding: 1em 1em;
         h2{
             font-weight: 600;
-            font-size: 2rem;
+            font-size: 1rem;
         }
         h3{
             margin-top: 1rem;
@@ -92,21 +92,13 @@
             flex-direction: column;
             color: white;
             background-color: black;
-            padding: 15vh 1rem;
+            padding: 15vh 2rem;
             position: relative;
 
             h2 {
                 font-weight: 900;
                 width: 65vw;
                 font-size: 4rem;
-            }
-
-            svg {
-                opacity: .8;
-                position: absolute;
-                top: 20rem;
-                right: 3em;
-                width: 10rem;
             }
 
             a {

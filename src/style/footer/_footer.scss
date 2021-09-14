@@ -33,6 +33,7 @@
         }
     }
     .logoFooter{
+        cursor: pointer;
         display: none;
         // z-index: 1;
         position: absolute;
@@ -43,6 +44,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
         svg {
             animation: all 2s infinite linear;
             width: 2em;
