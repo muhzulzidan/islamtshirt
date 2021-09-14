@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
@@ -13,6 +13,15 @@ import me from "../images/me.png"
 import "../style/wa/index.css"
 
 const Layout = ({ children }) => {
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.fbq != null) {
+        window.fbq('track', 'Lead', { currency: "USD", value: 9.99 });
+      }
+    }
+  }, [])
+
   return (
     <ContextProvider>
       <StaticQuery

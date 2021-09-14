@@ -9,4 +9,6 @@ import ContextProvider from '~/provider/ContextProvider'
 
 export const wrapRootElement = ({ element }) => (
     <ContextProvider>{element}</ContextProvider>
-)
+);
+
+
