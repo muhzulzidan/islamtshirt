@@ -15,7 +15,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             htmlAttributes={{
               lang,
             }}
-            title={`islamtshirt | ${title}`}
+            title={`${title}`}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
@@ -57,7 +57,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                       name: `keywords`,
                       content: keywords.join(`, `),
                     }
-                  : [`islam`, `tshirt`, `islamtshirt`]
+                  : {
+                    name: `keywords`,
+                    content: `islam, tshirt, islamtshirt`,
+                  }
               )
               .concat(meta)}
           />

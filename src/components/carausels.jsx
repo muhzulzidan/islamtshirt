@@ -31,7 +31,7 @@ export default class Carausels extends Component {
                 {
                     breakpoint: 15000,
                     settings: {
-                        slidesToShow: 4,
+                        slidesToShow: 3,
                     }
                 },
                 {

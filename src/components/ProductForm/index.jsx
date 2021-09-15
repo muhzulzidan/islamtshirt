@@ -5,7 +5,9 @@ import PropTypes from 'prop-types'
 
 import StoreContext from '~/context/StoreContext'
 
-const ProductForm = ({ product }) => {
+import SizeChart from '../menu/sizechart'
+
+const ProductForm = ({ product }, childMenu) => {
   const {
     options,
     variants,
@@ -18,6 +20,12 @@ const ProductForm = ({ product }) => {
     addVariantToCart,
     store: { client, adding },
   } = useContext(StoreContext)
+
+  const [isOpen, setIsOpen] = useState(false)
+  function toggleMenu() {
+    childMenu.open();
+    setIsOpen(!isOpen);
+  }
 
   const productVariant =
     client.product.helpers.variantForOptions(product, variant) || variant
@@ -96,8 +104,14 @@ const ProductForm = ({ product }) => {
   }).format(variant.price)
 
   return (
-    <>
+    <div className="productForm">
       <h3>{price}</h3>
+      <SizeChart ref={el => (childMenu = el)} />
+      <>
+        <button className={`MenuButton ${isOpen ? "menuOpen" : null}`} onClick={() => toggleMenu()}>
+          Size Chart
+        </button>
+      </>
       {options.map(({ id, name, values }, index) => (
         <React.Fragment key={id}>
           {/* <label htmlFor={name}>{name} </label> */}
@@ -141,7 +155,7 @@ const ProductForm = ({ product }) => {
         Add to Cart
       </button>
       {!available && <p>This Product is out of Stock!</p>}
-    </>
+    </div>
   )
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import SEO from '~/components/seo'
-import ProductForm from '~/components/ProductForm'
-import { GatsbyImage } from "gatsby-plugin-image"
+import ProductForm from '../../components/ProductForm'
 import Layout from '../../layouts'
 
 const ProductPage = ({ data }) => {
@@ -23,9 +23,7 @@ const ProductPage = ({ data }) => {
           </div>
         <div className="productPageDesc" >
             <h2>{product.title}</h2>
-            <p
-              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-            />
+            <p dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
             <ProductForm product={product} />
           </div>
       </div>

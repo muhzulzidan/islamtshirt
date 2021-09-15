@@ -1,0 +1,131 @@
+.productForm {
+    .sizeChart {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+
+        // transform: translateX(100%);
+        opacity: 0;
+        animation: all 0.35s;
+
+        &.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .sizeChartdarkbg {
+            background: rgb(49, 49, 49);
+            z-index: 11;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            opacity: .8;
+        }
+
+        .sizeChartChild {
+            padding: 2rem;
+            padding-top: 15vh;
+            color: #000;
+            font-weight: 700;
+            overflow: auto;
+            z-index: 12;
+            background: #ffffff;
+            width: 100%;
+        }
+
+        .sizeChartclose {
+            position: absolute;
+            background: transparent;
+            color: transparent;
+            padding: 0;
+            float: right;
+            top: 12vh;
+            right: 4vh;
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tshirt {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            align-items: center;
+
+            svg {
+                width: 20rem;
+                height: auto;
+            }
+        }
+
+        table {
+            width: 100%;
+            display: table;
+            flex-direction: column;
+            text-align-last: center;
+            align-self: center;
+
+            th,
+            td {
+                padding: 1rem;
+            }
+
+            thead {
+                tr {
+                    padding-bottom: 2rem;
+                }
+            }
+
+            td {
+                padding: .5rem;
+            }
+        }
+
+
+    }
+}
+
+@include bp("smaller") {
+    .productForm {
+        .sizeChart {}
+    }
+}
+
+@include bp("small") {
+    .productForm {
+        .sizeChart {
+            .sizeChartChild {
+                padding: 2rem;
+                padding-top: 5vh;
+                color: #000;
+                font-weight: 700;
+                overflow: auto;
+                z-index: 12;
+                background: #ffffff;
+                width: 50%;
+                margin-left: 25vw;
+                margin-top: 20vh;
+
+                .sizeChartclose {
+                    position: relative;
+                    top:0px
+                }
+            }
+        }
+    }
+}

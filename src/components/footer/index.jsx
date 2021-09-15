@@ -30,7 +30,7 @@ const Community = () => (
 
 const Social = () => (
     <div className="socialFooter">
-        <a href="https://www.facebook.com/theshop.co.id/" target="_blank" rel="noopener noreferrer"> 
+        <a href="https://www.facebook.com/Islamtshirt-106534211772135" target="_blank" rel="noopener noreferrer">
             <Fb className="fb" /> Facebook
         </a>
         <a href="https://www.instagram.com/islamtshirt/" target="_blank" rel="noopener noreferrer">

@@ -16,7 +16,7 @@ const IndexPage = ({data}, location) => {
 
   <Layout location={location}>
     <div className="index-page">
-      <SEO title={location.path} />
+      <SEO title="home" />
       <div className="hero" >
         <h1 className="hidden" >ISLAMTSHIRT</h1>
         <h2>SPREAD DAKWAH WITH US</h2>

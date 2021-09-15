@@ -14,7 +14,7 @@
             font-size: 1.2rem;
         }
         h3{
-            margin:1em 0em;
+            margin-top: 2em;
             font-size: 1.2rem;
         }
         input{
@@ -41,6 +41,12 @@
             color: #fff;
             border: none;
         }
+        .MenuButton{
+            background: transparent;
+            color: #000;
+            padding: 0;
+            border-bottom: 1px solid #000;
+        }
     }
 }
 
@@ -48,12 +54,16 @@
     .productPage{
         display: flex;
         .productPageImage{
+
             width: 40vw;
         }
         .productPageDesc{
-            position: fixed;
+            top: 0;
+            padding-top: 10vh;
+            position: sticky;
             left: 50%;
             width: 40%;
+            height: 90vh;
         }
     }
 
