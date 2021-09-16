@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'gatsby'
-import StoreContext from '~/context/StoreContext'
+import StoreContext from '../../context/StoreContext'
+// import { check } from 'prettier'
 // import LineItem from './LineItem'
 
 
@@ -63,12 +64,12 @@ const Cart = () => {
   const handleCheckout = () => {
     window.open(checkout.webUrl)
   }
-  console.log(checkout)
   const lineItems = checkout.lineItems.map(item => (
     <LineItem key={item.id.toString()} item={item} />
   ))
 
-
+  { console.log(checkout)}
+  // { console.log(checkout.lineItemsSubtotalPrice.amount)}
 
   return (
     <div className="cartContainer">
@@ -79,6 +80,7 @@ const Cart = () => {
         <div>
           <h2>Subtotal</h2>
           <p>$ {checkout.subtotalPrice}</p>
+
         </div>
 
         <div>

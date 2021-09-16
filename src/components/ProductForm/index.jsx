@@ -35,6 +35,7 @@ const ProductForm = ({ product }, childMenu) => {
     productId => {
       client.product.fetch(productId).then(fetchedProduct => {
         // this checks the currently selected variant for availability
+        
         const result = fetchedProduct.variants.filter(
           variant => variant.id === productVariant.shopifyId
         )

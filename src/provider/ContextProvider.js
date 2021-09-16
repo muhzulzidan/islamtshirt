@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import Client from 'shopify-buy'
 // import StoreContext from 'gatsby-plugin-shopify-buy'
 
-import Context from '~/context/StoreContext'
+import Context from '../context/StoreContext'
 
 const client = Client.buildClient(
   {

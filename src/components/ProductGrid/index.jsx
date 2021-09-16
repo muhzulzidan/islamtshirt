@@ -52,6 +52,7 @@ const ProductGrid = (location) => {
 
   return (
     <div className={`productGrid ${location.location.path === "/shop/" ? "productGridShop" : null}`} >
+      
       {isMobile ? console.log("hey") : console.log("nah")}
 
       { location.location.path==="/shop/" ?
