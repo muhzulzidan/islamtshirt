@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'gatsby'
 import StoreContext from '../../context/StoreContext'
 // import { check } from 'prettier'
@@ -61,20 +61,35 @@ const Cart = () => {
     store: { checkout },
   } = useContext(StoreContext)
 
+  // useEffect(() => {
+
+  // });
+
+
+  
+
   const handleCheckout = (e) => {
-    console.log(checkout)
-    typeof window !== "undefined" && window.gtag("event", "begin_checkout", { ...checkout })
-    typeof window !== "undefined" && window.gtag("event", "conversion", {'send_to': 'AW-301837594/FjloCMG8oPUCEJra9o8B', ...checkout})
-    
     // window.gtag(e, "begin_checkout", { checkout })
+    typeof window !== "undefined" && window.gtag('set', 
+    { "currency": checkout.totalPriceV2.currencyCode,
+      "value" : checkout.totalPriceV2.amount,
+      "items":  checkout.lineItems,
+    });
+    typeof window !== "undefined" && window.gtag("event", "begin_checkout", )
+    typeof window !== "undefined" && window.gtag("event", "conversion", {'send_to': 'AW-301837594/XngmCIThwPUCEJra9o8B',})
     window.open(checkout.webUrl)
   }
   const lineItems = checkout.lineItems.map(item => (
     <LineItem key={item.id.toString()} item={item} />
   ))
 
-  { console.log(checkout)}
+  // { console.log(checkout)}
   // { console.log(checkout.lineItemsSubtotalPrice.amount)}
+
+  // console.log(checkout)
+  // console.log(checkout.lineItems)
+  // console.log(checkout.totalPriceV2.amount)
+  // console.log(checkout.totalPriceV2.currencyCode)
 
   return (
     <div className="cartContainer">
