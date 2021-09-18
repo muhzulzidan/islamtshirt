@@ -72,6 +72,7 @@
     "dev": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve -H 0.0.0.0",
     "start": "npm run dev",
+    "clean" : "gatsby clean",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },

@@ -61,7 +61,12 @@ const Cart = () => {
     store: { checkout },
   } = useContext(StoreContext)
 
-  const handleCheckout = () => {
+  const handleCheckout = (e) => {
+    console.log(checkout)
+    typeof window !== "undefined" && window.gtag("event", "begin_checkout", { ...checkout })
+    typeof window !== "undefined" && window.gtag("event", "conversion", {'send_to': 'AW-301837594/FjloCMG8oPUCEJra9o8B', ...checkout})
+    
+    // window.gtag(e, "begin_checkout", { checkout })
     window.open(checkout.webUrl)
   }
   const lineItems = checkout.lineItems.map(item => (
@@ -95,7 +100,7 @@ const Cart = () => {
 
         <button
           className="checkout"
-          onClick={handleCheckout}
+          onClick={(e) => {handleCheckout(e)}}
           disabled={checkout.lineItems.length === 0}
         >
           Check out
