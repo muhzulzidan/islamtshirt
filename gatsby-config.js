@@ -88,5 +88,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://islamtshirt.us5.list-manage.com/subscribe/post?u=ac156967a82dbb399c1dcfe94&amp;id=ace8e65a23', 
+          timeout: 3500,
+      },
+  },
   ],
 }
