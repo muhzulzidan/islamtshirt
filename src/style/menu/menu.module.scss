@@ -18,40 +18,45 @@
 
   transition: all 0.35s;
 
-  .header{
+  .header {
     display: flex;
     // padding-top: 2rem;
     // padding-right: 2rem;
     font-size: 3rem;
-    font-weight: 900;    
+    font-weight: 900;
     position: fixed;
     align-self: flex-end;
     bottom: 5vh;
     // width: 10rem;
     text-align: end;
     word-break: break-all;
-    h1{
+
+    h1 {
       font-family: "Roboto", sans-serif;
     }
-    svg{
+
+    svg {
       width: 10rem;
       height: 5rem;
       margin-right: 2rem;
     }
   }
-  .link{
+
+  .link {
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
     padding-top: 10rem;
-    li{
+
+    li {
       margin-top: 1em;
       font-weight: 500;
       font-size: 1.5rem;
     }
-    .active{
-        color: #FCD65E;      
-        pointer-events: none;
+
+    .active {
+      color: #FCD65E;
+      pointer-events: none;
     }
   }
 
@@ -63,8 +68,6 @@
     pointer-events: all;
   }
 
-  
+
 
 }
-
-

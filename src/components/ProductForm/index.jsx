@@ -6,6 +6,9 @@ import PropTypes from 'prop-types'
 import StoreContext from '~/context/StoreContext'
 
 import SizeChart from '../menu/sizechart'
+import { Link } from 'gatsby-plugin-modal-routing'
+
+import Modals from '../../modal/index';
 
 const ProductForm = ({ product }, childMenu) => {
   const {
@@ -107,11 +110,14 @@ const ProductForm = ({ product }, childMenu) => {
   return (
     <div className="productForm">
       <h3>{price}</h3>
-      <SizeChart ref={el => (childMenu = el)} />
+      {/* <SizeChart ref={el => (childMenu = el)} /> */}
+      
       <>
-        <button className={`MenuButton ${isOpen ? "menuOpen" : null}`} onClick={() => toggleMenu()}>
+        {/* <button className={`d ${isOpen ? "menuOpen" : null}`} onClick={() => toggleMenu()}>
           Size Chart
-        </button>
+        </button> */}
+        {/* <Link  to="/sizechart/" asModal > Size Chart </Link> */}
+        <Modals />
       </>
       {options.map(({ id, name, values }, index) => (
         <React.Fragment key={id}>
