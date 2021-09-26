@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Modal from "./Modals";
+import Modal from "./modals";
 import SizeChart from "./sizechart";
 
 class Main extends Component {
