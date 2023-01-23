@@ -7,7 +7,7 @@ const CartPage = (location) => (
   <Layout location={location}>
     <div className="cart">
       <h1>Cart</h1>
-      <Cart />
+      {/* <Cart /> */}
     </div>
   </Layout>
 )
