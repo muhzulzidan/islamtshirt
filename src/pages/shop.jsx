@@ -16,12 +16,12 @@ const ShopPage = (location) => (
                 <h2>Shop</h2>
                 <IslamArab />
             </div>
-            <div className="creative" >
+            {/* <div className="creative" >
                 Search
                 Filter
                 Sort
-            </div>
-            <div className="product" >
+            </div> */}
+            <div className="product" >                
                 <ProductGrid location={location}/>
             </div>
         </div>

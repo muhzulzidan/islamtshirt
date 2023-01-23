@@ -36,13 +36,13 @@ module.exports = {
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-source-shopify`,
-      options: {
-        password: process.env.SHOPIFY_ADMIN_PASSWORD,
-        storeUrl: process.env.SHOPIFY_STORE_URL,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-shopify`,
+    //   options: {
+    //     password: process.env.SHOPIFY_ADMIN_PASSWORD,
+    //     storeUrl: process.env.SHOPIFY_STORE_URL,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -60,16 +60,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: 
-        // "3169340789952718", 
-        "363630142130463",
+        pixelId:
+          // "3169340789952718", 
+          "363630142130463",
       },
     },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-5W79T2F",
-        includeInDevelopment: true,       
+        includeInDevelopment: true,
         enableWebVitalsTracking: true,
       },
     },
@@ -91,28 +91,35 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-          endpoint: 'https://islamtshirt.us5.list-manage.com/subscribe/post?u=ac156967a82dbb399c1dcfe94&amp;id=ace8e65a23', 
-          timeout: 3500,
+        endpoint: 'https://islamtshirt.us5.list-manage.com/subscribe/post?u=ac156967a82dbb399c1dcfe94&amp;id=ace8e65a23',
+        timeout: 3500,
       },
-  },
-  {
-    resolve: `gatsby-plugin-portal`,
-    options: {
-      key: 'portal',
-      id: 'portal',        
     },
-  },
-  {
-    resolve: `gatsby-plugin-modal-routing`,
-    // options: {
-    //   // A selector to set react-modal's app root to, default is `#___gatsby`
-    //   // See http://reactcommunity.org/react-modal/accessibility/#app-element
-    //   appElement: '#___gatsby',
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal',
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-modal-routing`,
+      // options: {
+      //   // A selector to set react-modal's app root to, default is `#___gatsby`
+      //   // See http://reactcommunity.org/react-modal/accessibility/#app-element
+      //   appElement: '#___gatsby',
 
-    //   // Object of props that will be passed to the react-modal container
-    //   // See http://reactcommunity.org/react-modal/#usage
-    //   modalProps: { },
-    // }
-  }
+      //   // Object of props that will be passed to the react-modal container
+      //   // See http://reactcommunity.org/react-modal/#usage
+      //   modalProps: { },
+      // }
+    }
   ],
 }

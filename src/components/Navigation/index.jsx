@@ -5,23 +5,23 @@ import { Link } from "gatsby"
 import Hamburger from 'hamburger-react'
 // media query for desktop
 import { useMediaQuery } from 'react-responsive'
-import StoreContext from '~/context/StoreContext'
+// import StoreContext from '~/context/StoreContext'
 import Logo from '../../images/svg/logo.svg'
 import Menu from '../menu/menu'
 import Cart from '../../images/svg/cart.svg'
 
-const useQuantity = () => {
-  const {
-    store: { checkout },
-  } = useContext(StoreContext)
-  const items = checkout ? checkout.lineItems : []
-  const total = reduce(items, (acc, item) => acc + item.quantity, 0)
-  return [total !== 0, total]
-}
+// const useQuantity = () => {
+//   const {
+//     store: { checkout },
+//   } = useContext(StoreContext)
+//   const items = checkout ? checkout.lineItems : []
+//   const total = reduce(items, (acc, item) => acc + item.quantity, 0)
+//   return [total !== 0, total]
+// }
 
 
 const Navigation = ({ siteTitle }, childMenu) => {
-  const [hasItems, quantity] = useQuantity()
+  // const [hasItems, quantity] = useQuantity()
 
   const [isOpen, setIsOpen] = useState(false)
   function toggleMenu() {
@@ -51,7 +51,7 @@ const Navigation = ({ siteTitle }, childMenu) => {
         
         <div className="burgerContainer">
           <Link to="/cart">
-            {hasItems && <span>{quantity}</span>}
+            {/* {hasItems && <span>{quantity}</span>} */}
             <Cart />
           </Link>
           {

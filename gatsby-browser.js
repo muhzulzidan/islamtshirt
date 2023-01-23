@@ -5,10 +5,10 @@ import "./src/style/index.scss"
 
 
 import React from "react"
-import ContextProvider from '~/provider/ContextProvider'
+// import ContextProvider from '~/provider/ContextProvider'
 
-export const wrapRootElement = ({ element }) => (
-    <ContextProvider>{element}</ContextProvider>
-);
+// export const wrapRootElement = ({ element }) => (
+//     <ContextProvider>{element}</ContextProvider>
+// );
 
 

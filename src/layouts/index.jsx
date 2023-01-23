@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
-import ContextProvider from '~/provider/ContextProvider'
+// import ContextProvider from '~/provider/ContextProvider'
 import Navigation from '~/components/Navigation'
 import Footer from '../components/footer'
 
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   }, [])
 
   return (
-    <ContextProvider>
+    // <ContextProvider>
       <StaticQuery
         query={graphql`
           query SiteTitleQuery {
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
           </div>
         )}
       />
-    </ContextProvider>
+    // </ContextProvider>
   )
 }
 
