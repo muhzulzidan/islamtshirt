@@ -195,10 +195,16 @@ const ProductGrid = (location) => {
 
     // const isMobile = useMediaQuery({ maxWidth: 767 })
 
+    const shopSlugss = ["/shop", "/shop/"]
+
+
 
 
     return (
-        <div className={`productGrid ${location.location.path === "/shop/" ? "productGridShop" : null}`} >
+        <div className={`productGrid 
+        ${location.location.path.includes(shopSlugss) ? null : "productGridShop"}
+        `} >
+            {/* {location.location.path.includes(shopSlugss) ? console.log("anaj") : console.log("yes")} */}
 
             {/* {isMobile ? console.log("hey") : console.log("nah")} */}
             {/* {location.location.path ? console.log(allContentfulIslamTshirt ) : console.log("nah")} */}
@@ -208,7 +214,7 @@ const ProductGrid = (location) => {
                 allContentfulIslamTshirt.edges.map((node) => (
 
                     <div key={node.node.slug}>
-                        {console.log(node.node.products[0])}
+                        {/* {console.log(node.node.products[0])} */}
                         {/* <Link to={`/product/${node.node.slug}/`}> */}
                         <a  href='https://api.whatsapp.com/send?phone=+6281354789375&text=halo,%20saya%20mau%20pesan%20kaos%20islami'>
                             <GatsbyImage

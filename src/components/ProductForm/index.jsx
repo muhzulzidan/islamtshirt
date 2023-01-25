@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import StoreContext from '~/context/StoreContext'
 
 import SizeChart from '../menu/sizechart'
-import { Link } from 'gatsby-plugin-modal-routing'
+// import { Link } from 'gatsby-plugin-modal-routing'
 
 import Modals from '../../modal/index';
 

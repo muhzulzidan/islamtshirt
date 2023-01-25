@@ -70,12 +70,4 @@ const Navigation = ({ siteTitle }, childMenu) => {
   )
 }
 
-Navigation.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Navigation.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Navigation
