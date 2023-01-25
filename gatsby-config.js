@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // `gatsby-plugin-layout`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
