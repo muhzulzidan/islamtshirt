@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 import SEO from '../components/seo'
 // import ProductGrid from '../components/ProductGrid'
@@ -10,6 +10,7 @@ import IslamArabStroke from "../images/svg/islamArabStroke.svg"
 // import Carausels from '../components/carausels'
 import NewsLetter from '../components/newsletter';
 import Layout from '../layouts'
+const rustan =  "../images/rustan.jpg"
 
 const IndexPage = ({ data }, location) => {
   return (
@@ -18,10 +19,13 @@ const IndexPage = ({ data }, location) => {
       <div className="index-page">
         <SEO title="home" />
         <div className="hero" >
-          <h1 className="hidden" >ISLAMTSHIRT</h1>
-          <h2>SPREAD DAKWAH WITH US</h2>
-          <IslamArab />
-          <Link to="/shop" >Shop Now</Link>
+          <div className='content'>
+            <h1 className="hidden" >ISLAMTSHIRT</h1>
+            <h2>SPREAD DAKWAH WITH US</h2>
+            <IslamArab /> 
+            <Link to="/shop" >Shop Now</Link>
+          </div>
+          <StaticImage src={rustan} className="rustan"/>
         </div>
         <div className="creative" >
           <IslamArabStroke />
